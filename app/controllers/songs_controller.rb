@@ -8,7 +8,7 @@ class SongsController < ApplicationController
   end
 
   def new
-    @songs = Song.new
+    @song = Song.new
   end
 
   def create
