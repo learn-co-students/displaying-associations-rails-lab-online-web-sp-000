@@ -1,0 +1,2 @@
+class AddArtistIdToSong < ApplicationRecord
+end
