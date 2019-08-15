@@ -1,0 +1,9 @@
+<h1> Song Page </h1>
+
+  <ul>
+  <li> <%= @song.title %> </li>
+  <li> <%= link_to @song.artist.name, artist_path(@song.artist) %> </li>
+  </ul>
+
+
+<!-- < pluralize (@songs.artists.count , 'Song') %> -->
