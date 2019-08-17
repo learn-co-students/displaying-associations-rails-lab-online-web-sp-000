@@ -1,5 +1,8 @@
 class SongsController < ApplicationController
+  before_filter :set_song, only: [:show, :update, :edit, :destroy]
+
   def index
+    @songs = Song.all
   end
 
   def show
@@ -35,7 +38,6 @@ class SongsController < ApplicationController
   end
 
   def destroy
-    @song = Song.find(params[:id])
     @song.destroy
     flash[:notice] = "Song deleted."
     redirect_to songs_path
@@ -45,6 +47,10 @@ class SongsController < ApplicationController
 
   def song_params
     params.require(:song).permit(:title)
+  end
+
+  def set_song
+    @song = Song.find(params[:id])
   end
 end
 
