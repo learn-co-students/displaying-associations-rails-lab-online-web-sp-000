@@ -1,0 +1,12 @@
+<%= link_to "List of Songs", '/songs' %><br>
+<h1>Artist Index</h1>
+<ol>
+<% @artists.each do |a|  %>
+<li>
+  <%= link_to a.name, artist_path(a) %>
+  <%= a.song_count %> song
+</li>
+
+<% end %>
+</ol>
+<%= link_to "New", 'artists/new' %>
