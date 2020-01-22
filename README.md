@@ -1,3 +1,4 @@
+
 # Displaying Associations Rails
 
 In the previous unit, we used validations and forms to create a management
