@@ -4,4 +4,10 @@
 # Examples:
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
+#   Mayor.create(name: 'Emanuel', city: cities.firs
+
+elvis = Artist.create(name:"Elvis Presley 3")
+elvis.songs.create!({title: "Blue Suede Shoes3"})
+elvis.songs.create!(title: "Love Me Tender3")
+elvis.songs.create!(title: "Jailhouse Rock3")
+elvis.songs.create!(title: "Suspicious Minds3")
