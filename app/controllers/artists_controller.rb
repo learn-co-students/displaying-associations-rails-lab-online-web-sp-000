@@ -1,7 +1,12 @@
 class ArtistsController < ApplicationController
-  def index; end
+  def index
+    @artists = Artist.all
+  end
 
-  def show; end
+  def show
+    # binding.pry
+    @artist = Artist.find(params.require(:id))
+  end
 
   def new
     @artist = Artist.new
