@@ -1,0 +1,4 @@
+<%= content_tag(:h1, "All Songs") %>
+<% @songs.each do |song| %>
+  <a href=<%= song_path(song)%> style="display:block"><%= song.artist_name %> - <%= song.title %></a>
+<% end %>
