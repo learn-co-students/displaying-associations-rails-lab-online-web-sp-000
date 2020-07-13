@@ -1,5 +1,12 @@
+<%
+=begin%>
 <ol>
   <li>
     <%= link_to @song.artist_name, artist_path(@song.artist) %>
   </li>
 </ol>
+<%
+=end%>
+
+<h1> <%= @song.title %> </h1>
+<h3> <%= link_to @song.artist_name, artist_path(@song.artist) %> </h3>
