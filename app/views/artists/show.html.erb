@@ -1,0 +1,5 @@
+<ul>
+    <% @artist.songs.map do |s| %>
+        <%= link_to s.title, song_path(s) %>
+    <% end %>
+</ul>
