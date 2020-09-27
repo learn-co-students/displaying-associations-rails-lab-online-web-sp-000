@@ -1,0 +1,7 @@
+<h1>Editing <%#= @artist.name %></h1>
+<ul>
+<%= @artists.each  do |a| %>
+  <li><%= a.name %><%=  a.song_count %> song</li>
+  <div><%= link_to a.name, artist_path(a) %></div>
+<% end %>
+</ul>
