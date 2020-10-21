@@ -1,0 +1,5 @@
+<% @artists.each do |a| %>
+    <%= link_to(a) do %>
+        <%= "#{a.name} #{a.song_count} song" %> 
+    <% end %>
+<% end %>
