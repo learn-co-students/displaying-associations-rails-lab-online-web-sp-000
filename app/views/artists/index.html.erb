@@ -1,0 +1,4 @@
+<h1>All Artists</h1>
+<% @artists.each do |a|%>
+    <h5><%= a.name %> - <%=a.song_count%> <%= "song".pluralize(a.song_count) %></h5>
+    <% end %>
