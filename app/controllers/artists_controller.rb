@@ -1,5 +1,8 @@
 class ArtistsController < ApplicationController
+  before_action :find_artist, only: [:show]
+
   def index
+    @artists = Artist.all
   end
 
   def show
@@ -36,7 +39,7 @@ class ArtistsController < ApplicationController
   end
 
   def destroy
-    @artist = Artist.find(params[:id])
+    find_artist.destroy
     @artist.destroy
     flash[:notice] = "Artist deleted."
     redirect_to artists_path
@@ -46,5 +49,9 @@ class ArtistsController < ApplicationController
 
   def artist_params
     params.require(:artist).permit(:name)
+  end
+
+  def find_artist
+    @artist = Artist.find(params[:id])
   end
 end
