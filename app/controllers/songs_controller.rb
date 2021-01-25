@@ -1,12 +1,20 @@
 class SongsController < ApplicationController
   def index
+    @songs = Song.all
   end
 
   def show
+    @song = Song.find(params[:id])
   end
 
   def new
     @song = Song.new
+
+    if @song.save
+      redirect_to @song
+    else
+      render :new
+    end
   end
 
   def create
