@@ -1,0 +1,10 @@
+#artists show page links to the artist's songs by title 
+
+<h1><%= @artist.name %></h1>
+
+<h3><%= pluralize(@artist.songs.count, 'Song') %>
+<ul>
+    <% @artist.songs.each do |song| %>
+        <li><%= link_to song.title, song_path(song) %></li>
+    <% end %>
+</ul>
